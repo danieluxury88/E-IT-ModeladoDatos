@@ -1,0 +1,19 @@
+@startuml
+class Mastermind {
+}
+
+class Board
+class Player
+class Combination
+class Turn
+
+Mastermind *--> Board
+Mastermind *--> Player
+Player <|-- Guesser
+Player <|-- Finder
+Player *--> Combination
+Combination <|-- Secret
+Combination <|-- Guess
+Board *-- Turn
+Turn --> Combination
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+class MeninasPainting
+class Painting
+class Author
+class Technique
+class Elements
+class Position
+class Characters
+class Items
+class Infraestructure
+class Environment
+
+Elements *-- Position
+Elements <|-- Characters
+Elements <|-- Items
+Elements <|-- Infraestructure
+Elements <|-- Environment
+Elements <|-- Painting
+
+MeninasPainting <|-- Painting
+Painting *-- Author
+Painting *-- Technique
+Painting *-- Elements

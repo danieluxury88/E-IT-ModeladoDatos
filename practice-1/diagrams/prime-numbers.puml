@@ -1,0 +1,13 @@
+@startuml
+class PrimeNumberGenerator {
+}
+
+class PrimeChecker {
+}
+
+
+PrimeNumberGenerator --> PrimeChecker : uses
+PrimeChecker *--Conditions : has
+Conditions *-- PositiveInteger
+Conditions *-- Divisibility
+@enduml

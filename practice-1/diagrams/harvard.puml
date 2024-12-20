@@ -1,0 +1,16 @@
+@startuml
+' Harvard Architecture Diagram
+class HarvardArchitecture
+
+
+HarvardArchitecture *--> DataMemory
+HarvardArchitecture *--> InstructionsMemory
+HarvardArchitecture *--> CPU
+HarvardArchitecture *--> IO
+CPU --> IO
+CPU --> InstructionsMemory
+CPU --> DataMemory
+
+CPU *-- ALU
+CPU *-- ControlUnit
+@enduml

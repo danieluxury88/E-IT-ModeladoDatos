@@ -1,0 +1,29 @@
+@startuml
+class TicTacToe
+class Turn
+class Player
+class Board
+class Coordinates
+class Goal
+class Diagonal
+class Row
+class Column
+class Move
+class Verify
+
+TicTacToe *--> Turn
+TicTacToe *--> Player
+TicTacToe *--> Board
+Board *--> "3x3" Coordinates
+Player o--> Piece
+Goal <|-- Diagonal
+Goal <|-- Row
+Goal <|-- Column
+
+Player ..> Turn
+Turn *--> Move
+Turn *--> Verify
+Move ..> Piece
+Move ..> Coordinates
+Verify --> Goal
+@enduml

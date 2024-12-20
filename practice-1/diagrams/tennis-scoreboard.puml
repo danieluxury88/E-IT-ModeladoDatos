@@ -1,0 +1,13 @@
+@startuml
+class TennisScoreboard {
+}
+class Scoreboard {
+}
+TennisScoreboard <|-- Scoreboard
+Scoreboard *-- Players
+Scoreboard *-- Rules
+Scoreboard *-- Times
+Rules <|-- Sets
+Sets *-- Games
+Games *-- Points
+Games *-- Tiebreak

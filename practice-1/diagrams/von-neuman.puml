@@ -1,0 +1,16 @@
+@startuml
+' Von Neumann Architecture Diagram
+class VonNeumannArchitecture
+
+
+VonNeumannArchitecture *--> Memory
+Memory *--> DataMemory
+Memory *--> InstructionsMemory
+VonNeumannArchitecture *--> CPU
+VonNeumannArchitecture *--> IO
+CPU --> IO
+CPU --> Memory
+
+CPU *-- ALU
+CPU *-- ControlUnit
+@enduml
